@@ -7,6 +7,12 @@ export default defineConfig({
   input: "src/main.js",
   output: {
     file: "bundle.js",
+    paths: {
+      react: "preact/compat",
+      "react-dom": "preact/compat",
+      "react/jsx-runtime": "preact/jsx-runtime",
+      "react/jsx-dev-runtime": "preact/jsx-dev-runtime",
+    },
   },
   plugins: [
     nodeResolve(),
@@ -14,9 +20,7 @@ export default defineConfig({
     commonjs(),
   ],
   external: [
-    "react",
-    "react/jsx-runtime",
-    "react/jsx-dev-runtime",
+    /^p?react(\/[\w-]+)?$/,
     "react-dom",
     "react-is",
     "scheduler",

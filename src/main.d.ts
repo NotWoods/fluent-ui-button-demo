@@ -1,15 +1,15 @@
-/// <reference types="react" />
+import type { ComponentChildren, FunctionComponent } from "preact";
 
-export const Button: React.FunctionComponent<{
+export const Button: FunctionComponent<{
   icon?: object;
-  children?: React.ReactNode;
+  children?: ComponentChildren;
 }>;
 
-export const FluentProvider: React.FunctionComponent<{
+export const FluentProvider: FunctionComponent<{
   theme?: object;
   dir?: "ltr" | "rtl";
   className?: string;
-  children?: React.ReactNode;
+  children?: ComponentChildren;
 }>;
 
 export function makeStyles<Slots extends string | number>(
@@ -18,5 +18,5 @@ export function makeStyles<Slots extends string | number>(
 
 export const webLightTheme: object;
 
-export const Checkmark20Regular: React.FunctionComponent;
-export const Checkmark48Filled: React.FunctionComponent;
+export const Checkmark20Regular: FunctionComponent;
+export const Checkmark48Filled: FunctionComponent;
