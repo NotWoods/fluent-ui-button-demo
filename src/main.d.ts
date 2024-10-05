@@ -1,11 +1,11 @@
 /// <reference types="react" />
 
-export const Button: React.FC<{
+export const Button: React.FunctionComponent<{
   icon?: object;
   children?: React.ReactNode;
 }>;
 
-export const FluentProvider: React.FC<{
+export const FluentProvider: React.FunctionComponent<{
   theme?: object;
   dir?: "ltr" | "rtl";
   className?: string;
@@ -18,5 +18,5 @@ export function makeStyles<Slots extends string | number>(
 
 export const webLightTheme: object;
 
-export const Checkmark20Regular: React.FC;
-export const Checkmark48Filled: React.FC;
+export const Checkmark20Regular: React.FunctionComponent;
+export const Checkmark48Filled: React.FunctionComponent;

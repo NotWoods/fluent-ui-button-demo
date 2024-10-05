@@ -13,5 +13,13 @@ export default defineConfig({
     replace({ "process.env.NODE_ENV": JSON.stringify("production") }),
     commonjs(),
   ],
-  external: ["react", "react-dom", "react-is", "scheduler", "prop-types"],
+  external: [
+    "react",
+    "react/jsx-runtime",
+    "react/jsx-dev-runtime",
+    "react-dom",
+    "react-is",
+    "scheduler",
+    "prop-types",
+  ],
 });
